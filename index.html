@@ -1,0 +1,75 @@
+<!DOCTPYEhtml>
+<html>
+<head> 
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+ <body>
+   <h1>ทายบุคคลในรูปกัน</h1>
+   <div id = "choice">
+   <p>ใคร สวยที่สุด </p>
+   <img src = '/Users/poom/Desktop/HTML & CSS/HTML/IMG_9680.JPG' width="700" height="500" >
+   <p></p>
+   <p> 
+    <input id = 'choiceA' type="button" value = "คนซ้ายสุด">
+    <input id = 'choiceB' type="button" value = "คนกลาง">
+    <input id = 'choiceC' type="button" value = "คนขวาสุด">
+    <input id = 'choiceD' type="button" value = "ไม่มี">
+   </p>
+  </div>
+  <div id ="correct" hidden>
+    <p> <b>ถูกจร้า</b> <h1>"ไม่มี"</h1> </p>
+    <p><input id="reason" type="button" value="เหตุผล"></p>
+    <p id = "r" hidden><b>เพราะทุกคนสวยเท่ากันจร้าาา</b></p>
+  </div>
+   <div id = "incorrect" hidden>
+     <p>ยังไม่ถูกจร้าาาา</p>
+     <p> <input id = 'new' type="button" value="ลองเลือกใหม่จร้า"></p>
+  </div>
+   <script>
+    let a = document.getElementById('choiceA')
+    let b = document.getElementById('choiceB')
+    let c = document.getElementById('choiceC')
+    let d = document.getElementById('choiceD')
+    let choices = document.getElementById("choice")
+    let incorrect = document.getElementById("incorrect")
+    let corrected = document.getElementById("correct")
+    let new1 = document.getElementById("new")
+    let button_reason = document.getElementById("reason")
+    let r = document.getElementById("r")
+
+    d.onclick = () => {
+       choices.hidden = true
+       incorrect.hidden = true
+       corrected.hidden = false
+       
+    }
+    a.onclick = () => {
+       choices.hidden = true
+       incorrect.hidden = false
+       corrected.hidden = true
+    }
+    b.onclick = () => {
+       choices.hidden = true
+       incorrect.hidden = false
+       corrected.hidden = true
+    }
+    c.onclick = () => {
+       choices.hidden = true
+       incorrect.hidden = false
+       corrected.hidden = true
+    }
+    new1.onclick = () => {
+       choices.hidden = false
+       incorrect.hidden = true
+       corrected.hidden = true
+    }
+    button_reason.onclick = () => {
+       choices.hidden = true
+       incorrect.hidden = true
+       corrected.hidden = false
+       r.hidden = false
+    }
+   </script>
+
+ </body>
+</html>
